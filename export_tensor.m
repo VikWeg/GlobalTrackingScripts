@@ -1,4 +1,4 @@
-tensor = load_nii('C:/ETH/GlobalTracking/1159_tensor.nii');
+tensor = load_nii('C:/ETH/Neuro/GlobalTracking/1159_tensor.nii');
 
 dim = size(tensor.img);
 
