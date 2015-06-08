@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13682,        371]
-NotebookOptionsPosition[     13354,        356]
-NotebookOutlinePosition[     13701,        371]
-CellTagsIndexPosition[     13658,        368]
+NotebookDataLength[     14188,        380]
+NotebookOptionsPosition[     13859,        365]
+NotebookOutlinePosition[     14207,        380]
+CellTagsIndexPosition[     14164,        377]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -247,6 +247,12 @@ Cell[BoxData[{
          RowBox[{"Association", "[", 
           RowBox[{"{", "\[IndentingNewLine]", 
            RowBox[{
+            RowBox[{"\"\<C\>\"", "\[Rule]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<a\>\"", "\[Rule]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"s", "\[Equal]", "1"}], ",", "1", ",", "0"}], "]"}]}], 
+            ",", "\[IndentingNewLine]", 
             RowBox[{"\"\<\!\(\*SubscriptBox[\(E\), \(d\)]\)\>\"", "\[Rule]", 
              RowBox[{
               RowBox[{"Edata", "[", 
@@ -352,11 +358,14 @@ Cell[BoxData[{
   3.6427609016327667`*^9, 3.6427609032415695`*^9}, {3.642760983375928*^9, 
   3.6427610530374603`*^9}, {3.642762032881261*^9, 3.642762041618078*^9}, {
   3.6427620794221473`*^9, 3.64276208067715*^9}, {3.642762131031249*^9, 
-  3.6427621729047318`*^9}, {3.6427622152342186`*^9, 3.6427622648589144`*^9}}]
+  3.6427621729047318`*^9}, {3.6427622152342186`*^9, 3.6427622648589144`*^9}, {
+  3.6427813941595273`*^9, 3.6427814019219713`*^9}, {3.6427820459788094`*^9, 
+  3.6427820550873303`*^9}, {3.6427824228833675`*^9, 3.6427824289487143`*^9}, {
+  3.6427827713162966`*^9, 3.6427827843960447`*^9}}]
 },
 WindowSize->{1078, 1238},
 WindowMargins->{{Automatic, 16}, {Automatic, -1}},
-FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (September 9, 2014)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -372,10 +381,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 1827, 52, 112, "Input"],
 Cell[2388, 74, 3722, 104, 112, "Input"],
-Cell[6113, 180, 7237, 174, 644, "Input"]
+Cell[6113, 180, 7742, 183, 684, "Input"]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
