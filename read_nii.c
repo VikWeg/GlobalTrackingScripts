@@ -10,6 +10,7 @@ typedef float MY_DATATYPE;
 
 /**************  MAIN  ****************************/
 
+/*
 main(int argc,char *argv[]) 
 {
 
@@ -23,6 +24,7 @@ main(int argc,char *argv[])
 		read_nifti_file(hdr_file, data_file);
 	}
 }
+*/
 
 /************ read_nifti_file ****************/
 
@@ -51,14 +53,14 @@ int read_nifti_file(char *hdr_file, char *data_file)
 	fclose(fp);
 
 
-	/********** print a little header information */
+	/********** print a little header information 
 	fprintf(stderr, "\n%s header information:",hdr_file);
 	fprintf(stderr, "\nXYZT dimensions: %d %d %d %d",hdr.dim[1],hdr.dim[2],hdr.dim[3],hdr.dim[4]);
 	fprintf(stderr, "\nDatatype code and bits/pixel: %d %d",hdr.datatype,hdr.bitpix);
 	fprintf(stderr, "\nScaling slope and intercept: %.6f %.6f",hdr.scl_slope,hdr.scl_inter);
 	fprintf(stderr, "\nByte offset to data in datafile: %ld",(long)(hdr.vox_offset));
 	fprintf(stderr, "\n");
-
+	*/
 
 	/********** open the datafile, jump to data offset */
 	fp = fopen(data_file,"r");
