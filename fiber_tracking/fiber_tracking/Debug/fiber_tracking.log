@@ -1,17 +1,18 @@
-﻿Der Buildvorgang wurde am 11.06.2015 16:59:58 gestartet.
+﻿Der Buildvorgang wurde am 11.06.2015 23:43:44 gestartet.
      1>Projekt "C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\fiber_tracking\fiber_tracking.vcxproj" auf Knoten "2", Build Ziel(e).
      1>ClCompile:
-         C:\Apps\Visual Studio 13\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt fiber_tracking.cpp
+         C:\Apps\VisualStudio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt fiber_tracking.cpp
+     1>cl : Befehlszeile warning D9028: Fehler beim minimalen Neukompilieren, normale Erstellung wird durchgeführt.
          fiber_tracking.cpp
      1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\apps\visual studio 13\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
+                 c:\apps\visualstudio2013\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
      1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(34): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\apps\visual studio 13\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
+                 c:\apps\visualstudio2013\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
        Link:
-         C:\Apps\Visual Studio 13\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.lib" /MACHINE:X86 Debug\fiber_tracking.obj
+         C:\Apps\VisualStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.lib" /MACHINE:X86 Debug\fiber_tracking.obj
          fiber_tracking.vcxproj -> C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.exe
      1>Die Erstellung des Projekts "C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\fiber_tracking\fiber_tracking.vcxproj" ist abgeschlossen, Build Ziel(e).
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:00.95
+Verstrichene Zeit 00:00:00.40

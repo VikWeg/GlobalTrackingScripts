@@ -31,7 +31,7 @@ int main()
 
 	//***************************************************
 
-	FILE* data_file = fopen("C:/ETH/Neuro/GlobalTracking/1159_tensor.nii", "r");
+	FILE* data_file = fopen("C:/ETH/Neuro/GlobalTracking/1159_tensor.nii", "rb");
 	if (data_file == NULL)
 	{
 		fprintf(stderr, "\nError opening data file\n");
@@ -55,10 +55,6 @@ int main()
 		fprintf(stderr, "\nError reading data\n");
 	}
 
-	int err = ferror(data_file);
-	int eof = feof(data_file);
-	int pos = ftell(data_file);
-
 	fclose(data_file);
 
 	int x = 48;
@@ -66,10 +62,11 @@ int main()
 	int z = 64;
 	int t = 1;
 
-	int coo = (t - 1) * 128 * 128 * 72 + (72 - z) * 128 * 128 + (128 - y) * 128 + (128 - x);
+	int coo = (t - 1) * 128 * 128 * 90 + (90 - z) * 128 * 128 + (128 - y) * 128 + (128 - x);
 
-	//for(i = 0; i < hdr.dim[1]; i++)
+	//for(int i = 0; i < hdr.dim[1]; i++)
 	printf("\ndata[%d] = %f\n", coo, data[coo]);
 
+	int i = 0;
 }
 
