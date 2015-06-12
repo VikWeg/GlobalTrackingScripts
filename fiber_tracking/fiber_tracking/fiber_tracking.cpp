@@ -6,6 +6,8 @@
 #include <string.h>
 #include "nifti1.h"
 
+#include "functions.h"
+
 #define MIN_HEADER_SIZE 348
 #define NII_HEADER_SIZE 352
 
@@ -55,20 +57,6 @@ int main()
 	}
 
 	fclose(data_file);
-
-	struct vertex
-	{
-		float* x; //
-		vertex** c; //
-		float* T; //
-		//float Emin;
-		//float Emax;
-		int sig; //
-		int nn; //
-		vertex** n; //
-	};
-
-	vertex null = { 0, 0, 0, 0, 0, 0};
 
 	vertex*** ensemble = new vertex**;
 
@@ -162,7 +150,8 @@ int main()
 					ensemble[i][j][k].c[n] = &null;
 			}
 
-
 	free(data);
+
+
 }
 
