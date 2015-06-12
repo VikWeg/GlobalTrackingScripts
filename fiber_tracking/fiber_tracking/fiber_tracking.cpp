@@ -59,16 +59,16 @@ int main()
 	struct vertex
 	{
 		float* x; //
+		vertex** c; //
 		float* T; //
-		float Emin;
-		float Emax;
+		//float Emin;
+		//float Emax;
 		int sig; //
 		int nn; //
-		vertex** c; //
 		vertex** n; //
 	};
 
-	vertex null = { 0, 0, 0, 0, 0, 0, 0, 0 };
+	vertex null = { 0, 0, 0, 0, 0, 0};
 
 	vertex*** ensemble = new vertex**;
 
@@ -76,6 +76,7 @@ int main()
 	int center [4] = {0, 48, 64, 64 };
 	int size = 9;
 	int dim[4] = {0, hdr.dim[1], hdr.dim[2], hdr.dim[3] };
+	float ten [6] = { 0, 0, 0, 0, 0, 0 };
 
 	for (int i = 0; i < size; i++)
 	{
@@ -89,6 +90,7 @@ int main()
 			{
 				//******** Tensor ********
 				ensemble[i][j][k].T = new float[6];
+
 				for (int t = 0; t < 6; t++)
 				{
 					coo =	t*dim[1] * dim[2] * dim[3]
@@ -96,8 +98,18 @@ int main()
 							+ (dim[2] - (center[2] + j - size/2) ) * dim[1]
 							+ (dim[1] - (center[1] + i - size/2) );
 
-					ensemble[i][j][k].T[t] = data[coo];
+					ten[t] = data[coo];
 				}
+
+				float norm = 1/ ( ten[1] * ten[1] + ten[2] * ten[2] + ten[4] * ten[4] - ten[0] * ten[3] - ten[5] * (ten[0] + ten[3]) );
+
+				ensemble[i][j][k].T[0] = (ten[4] * ten[4] - ten[3] * ten[5])* norm;
+				ensemble[i][j][k].T[1] = (ten[1] * ten[5] - ten[2] * ten[4])* norm;
+				ensemble[i][j][k].T[2] = (ten[2] * ten[3] - ten[1] * ten[4])* norm;
+				ensemble[i][j][k].T[3] = (ten[2] * ten[2] - ten[0] * ten[5])* norm;
+				ensemble[i][j][k].T[4] = (ten[0] * ten[4] - ten[1] * ten[2])* norm;
+				ensemble[i][j][k].T[5] = (ten[1] * ten[1] - ten[0] * ten[3])* norm;
+
 				//******** Position ********
 				ensemble[i][j][k].x = new float[3];
 				ensemble[i][j][k].x[0] = i;

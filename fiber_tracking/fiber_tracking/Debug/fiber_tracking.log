@@ -1,4 +1,4 @@
-﻿Der Buildvorgang wurde am 12.06.2015 16:10:02 gestartet.
+﻿Der Buildvorgang wurde am 12.06.2015 17:13:18 gestartet.
      1>Projekt "C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\fiber_tracking\fiber_tracking.vcxproj" auf Knoten "2", Build Ziel(e).
      1>ClCompile:
          C:\Apps\Visual Studio 13\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt fiber_tracking.cpp
@@ -7,13 +7,13 @@
                  c:\apps\visual studio 13\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
      1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(33): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\apps\visual studio 13\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(103): warning C4244: '=': Konvertierung von 'int' in 'float', möglicher Datenverlust
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(104): warning C4244: '=': Konvertierung von 'int' in 'float', möglicher Datenverlust
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(105): warning C4244: '=': Konvertierung von 'int' in 'float', möglicher Datenverlust
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(125): warning C4244: '=': Konvertierung von 'double' in 'int', möglicher Datenverlust
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(131): warning C4244: 'Initialisierung': Konvertierung von 'double' in 'int', möglicher Datenverlust
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(133): warning C4244: 'Initialisierung': Konvertierung von 'double' in 'int', möglicher Datenverlust
-     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(135): warning C4244: 'Initialisierung': Konvertierung von 'double' in 'int', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(115): warning C4244: '=': Konvertierung von 'int' in 'float', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(116): warning C4244: '=': Konvertierung von 'int' in 'float', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(117): warning C4244: '=': Konvertierung von 'int' in 'float', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(137): warning C4244: '=': Konvertierung von 'double' in 'int', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(143): warning C4244: 'Initialisierung': Konvertierung von 'double' in 'int', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(145): warning C4244: 'Initialisierung': Konvertierung von 'double' in 'int', möglicher Datenverlust
+     1>c:\eth\neuro\globaltracking\globaltrackingscripts\fiber_tracking\fiber_tracking\fiber_tracking.cpp(147): warning C4244: 'Initialisierung': Konvertierung von 'double' in 'int', möglicher Datenverlust
        Link:
          C:\Apps\Visual Studio 13\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.lib" /MACHINE:X86 Debug\fiber_tracking.obj
          fiber_tracking.vcxproj -> C:\ETH\Neuro\GlobalTracking\GlobalTrackingScripts\fiber_tracking\Debug\fiber_tracking.exe
@@ -21,4 +21,4 @@
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:00.96
+Verstrichene Zeit 00:00:00.53
