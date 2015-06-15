@@ -1,13 +1,4 @@
-#include <fstream>
-#include <iostream>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "nifti1.h"
-
-#define MIN_HEADER_SIZE 348
-#define NII_HEADER_SIZE 352
+#include "functions.h"
 
 int main()
 {
@@ -56,20 +47,6 @@ int main()
 
 	fclose(data_file);
 
-	struct vertex
-	{
-		float* x; //
-		vertex** c; //
-		float* T; //
-		//float Emin;
-		//float Emax;
-		int sig; //
-		int nn; //
-		vertex** n; //
-	};
-
-	vertex null = { 0, 0, 0, 0, 0, 0};
-
 	vertex*** ensemble = new vertex**;
 
 	int coo;
@@ -116,6 +93,11 @@ int main()
 				ensemble[i][j][k].x[1] = j;
 				ensemble[i][j][k].x[2] = k;
 
+				ensemble[i][j][k].pos = new int[3];
+				ensemble[i][j][k].pos[0] = i;
+				ensemble[i][j][k].pos[1] = j;
+				ensemble[i][j][k].pos[2] = k;
+
 				//******** Surface ********
 				if (i == 0 || j == 0 || k == 0 || i == size - 1 || j == size - 1 || k == size - 1)
 					ensemble[i][j][k].sig = 1;
@@ -124,16 +106,16 @@ int main()
 			}
 		}
 	}
-
+	free(data);
 	int nn;
 	for (int i = 0; i < size; i++)
 		for (int j = 0; j < size; j++)
 			for (int k = 0; k < size; k++)
 			{
 				//******** Neighbours ********
-				nn = (fmin(size, i + 1) - fmax(0, i - 1) + 1)
-					*(fmin(size, j + 1) - fmax(0, j - 1) + 1)
-					*(fmin(size, k + 1) - fmax(0, k - 1) + 1)
+				nn = (fmin(size, i + 2) - fmax(0, i - 1) )
+					*(fmin(size, j + 2) - fmax(0, j - 1) )
+					*(fmin(size, k + 2) - fmax(0, k - 1) )
 					- 1;
 
 				ensemble[i][j][k].nn = nn;
@@ -157,12 +139,35 @@ int main()
 
 				//******** Connected ********
 
-				ensemble[i][j][k].c = new vertex* [nn];
+				ensemble[i][j][k].c = new int [nn];
 				for (int n = 0; n < nn; n++)
-					ensemble[i][j][k].c[n] = &null;
+					ensemble[i][j][k].c[n] = 0;
 			}
 
 
-	free(data);
+
+	int i, j, k;
+	for (int n = 0; n < size*size*size; n++)
+	{
+		std::uniform_int_distribution<int> u_i(0, size-1);
+		std::uniform_int_distribution<int> u_j(0, size-1);
+		std::uniform_int_distribution<int> u_k(0, size-1);
+
+		i = u_i(generate);
+		j = u_j(generate);
+		k = u_k(generate);
+
+		mc_c(&ensemble[i][j][k]);
+		mc_x(&ensemble[i][j][k]);
+		std::cout << std::setprecision(2) << (100.*n) / (size*size*size) << "\n";
+	}
+
+	float E = 0;
+	for (int i = 0; i < size; i++)
+		for (int j = 0; j < size; j++)
+			for (int k = 0; k < size; k++)
+				E += Ei(&ensemble[i][j][k]);
+
+	
 }
 
