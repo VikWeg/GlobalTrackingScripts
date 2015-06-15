@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 #include "functions.h"
+=======
+#include <fstream>
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "nifti1.h"
+
+#include "functions.h"
+
+#define MIN_HEADER_SIZE 348
+#define NII_HEADER_SIZE 352
+>>>>>>> origin/master
 
 int main()
 {
@@ -144,6 +159,7 @@ int main()
 					ensemble[i][j][k].c[n] = 0;
 			}
 
+<<<<<<< HEAD
 
 
 	int i, j, k;
@@ -167,6 +183,9 @@ int main()
 		for (int j = 0; j < size; j++)
 			for (int k = 0; k < size; k++)
 				E += Ei(&ensemble[i][j][k]);
+=======
+	free(data);
+>>>>>>> origin/master
 
 	
 }
